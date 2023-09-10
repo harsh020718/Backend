@@ -6,16 +6,10 @@ connectToMongo();
 
 const app = express();
 const port = process.env.PORT || 5000;
-const allowedOrigins = ['https://frontend-hazel-one-41.vercel.app'];
+// const allowedOrigins = ['https://frontend-hazel-one-41.vercel.app'];
 
 app.use(cors({
-  origin: function (origin, callback) {
-    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin:'*'
 }));
 app.use(express.json());
 app.use("/api/auth", require("./Routes/auth"));
