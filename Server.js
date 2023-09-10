@@ -6,7 +6,13 @@ connectToMongo();
 
 const app = express();
 const port = process.env.PORT || 5000;
-app.use(cors());
+app.use(cors(
+  {
+    origin: ["https://frontend-1h8s.vercel.app"],
+    methods:["POST","GET","PUT","DELETE"],
+    credentials:true,
+  }
+));
 app.use(express.json());
 app.use("/api/auth", require("./Routes/auth"));
 app.use("/api/doingR", require("./Routes/doingR"));
