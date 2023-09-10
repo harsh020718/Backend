@@ -1,7 +1,7 @@
 require('dotenv').config();
 const mongoose = require("mongoose");
 const mongoURI = process.env.DATABASE;
-console.log(process.env.DATABASE);
+// console.log(process.env.DATABASE);
 const connectToMongo = async () => {
     try {
       await mongoose.connect(mongoURI);
@@ -10,6 +10,7 @@ const connectToMongo = async () => {
       // Create a sample document in a collection to create the database
       
     } catch (error) {
+      console.log("F");
       console.error("Error connecting to Mongo:", error);
     }
   };

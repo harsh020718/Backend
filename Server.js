@@ -1,7 +1,7 @@
 const connectToMongo = require("./db");
 const express = require("express");
 var cors = require("cors");
-
+console.log("FESFS");
 connectToMongo();
 
 const app = express();
