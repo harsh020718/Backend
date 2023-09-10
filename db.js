@@ -11,7 +11,7 @@ const connectToMongo = async () => {
       // Create a sample document in a collection to create the database
       
     } catch (error) {
-      
+      console.log("FS");
       console.error("Error connecting to Mongo:", error);
     }
   };
