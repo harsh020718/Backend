@@ -1,5 +1,5 @@
 var jwt = require('jsonwebtoken')
-const JWT_SECRET = 'Harshisagood$boy'
+const JWT_SECRET = process.env.JWT_SECRET;
 
 const fetchuser = (req, res, next) =>{
     
