@@ -1,11 +1,12 @@
-const connectToMongo = require("./db");
+// const connectToMongo = require("./db");
+require("./db")
 const express = require("express");
 var cors = require("cors");
 
-connectToMongo();
+// connectToMongo();
 
 const app = express();
-const port = process.env.BASE_URL  || 5000;
+const port = 5000;
 // const allowedOrigins = ['https://frontend-hazel-one-41.vercel.app'];
 
 // app.use((req,res,next)=>{
