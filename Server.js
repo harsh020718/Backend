@@ -5,7 +5,7 @@ var cors = require("cors");
 connectToMongo();
 
 const app = express();
-const port = process.env.BASE_URL;
+const port = process.env.BASE_URL  || 5000;
 // const allowedOrigins = ['https://frontend-hazel-one-41.vercel.app'];
 
 // app.use((req,res,next)=>{
